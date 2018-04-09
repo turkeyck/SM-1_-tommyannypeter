@@ -2,7 +2,7 @@ import random
 import time
 
 def OneDie(trials):
-    c1=time.clock()
+    c1 = time.clock()
     print("====================")
     print("One die with 6 sides")
     print("Number of trials = ", trials)
@@ -22,11 +22,11 @@ def OneDie(trials):
     print("s, N_s, N_s-N/6, N_s/N, N_s/N-1/6")
     j = 0
     while j < sides:
-        print(j+1, histogram[j], histogram[j]-trials/sides, histogram[j]/trials, histogram[j]/trials-1/6)
+        print(j + 1, histogram[j], histogram[j] - trials/sides, histogram[j]/trials, histogram[j]/trials - 1/6)
         j = j + 1
 
-    c2=time.clock()
-    print("Elapsed time =", c2-c1)
+    c2 = time.clock()
+    print("Elapsed time =", c2 - c1)
 
 def run():
     OneDie(1)
