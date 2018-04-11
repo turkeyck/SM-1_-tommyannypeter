@@ -9,20 +9,18 @@ def OneDie(trials):
 
     sides = 6
     histogram = [0, 0, 0, 0, 0, 0]
-    print(histogram)
 
     j = 0
     r = 0
     while j < trials :
-        r = int(random.random()*sides) # Faster
-#         r = random.randint(0,5) # Slower. Return random integer in range [a, b], including both end points.
+        r = int(random.random()*sides)
         histogram[r] = histogram[r] + 1
         j = j + 1
 
-    print("s, N_s, N_s-N/6, N_s/N, N_s/N-1/6")
+    print("s\tN_s" + " " * 6 + "N_s-N/6" + " " * 16 + "N_s/N" + " " * 16 + "N_s/N-1/6")
     j = 0
     while j < sides:
-        print(j + 1, histogram[j], histogram[j] - trials/sides, histogram[j]/trials, histogram[j]/trials - 1/6)
+        print("{}\t{:<9}{:<23}{:<21}{}".format(j + 1, histogram[j], histogram[j] - trials/sides, histogram[j]/trials, histogram[j]/trials - 1/6))
         j = j + 1
 
     c2 = time.clock()
@@ -36,6 +34,6 @@ def run():
 	OneDie(10000)
 	OneDie(100000)
 	OneDie(1000000)
-	OneDie(1750000)
+	OneDie(2000000)
 
 run()
