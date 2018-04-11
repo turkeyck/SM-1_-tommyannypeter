@@ -31,9 +31,9 @@ def OneDieS(trials, sides):
     vari_s = temp/trials - math.pow(mean_s, 2)
     stde_s = math.sqrt(vari_s)
     print("Statistical:")
-    print("\t{:<20} = ".format("Mean value"), "{:<23}".format(mean_s), "(deviation = {:<23})".format(mean_t - mean_s))
-    print("\t{:<20} = ".format("Variance"), "{:<23}".format(vari_s), "(deviation = {:<23})".format(vari_t - vari_s))
-    print("\t{:<20} = ".format("Standard deviation"), "{:<23}".format(stde_s), "(deviation = {:<23})".format(stde_t - stde_s))
+    print("\t{:<20} = ".format("Mean value"), "{:<23}".format(mean_s), "(deviation = {:<23}({:>6}%))".format(mean_t - mean_s, round((mean_t - mean_s)/mean_t*100, 2)))
+    print("\t{:<20} = ".format("Variance"), "{:<23}".format(vari_s), "(deviation = {:<23}({:>6}%))".format(vari_t - vari_s, round((vari_t - vari_s)/vari_t*100, 2)))
+    print("\t{:<20} = ".format("Standard deviation"), "{:<23}".format(stde_s), "(deviation = {:<23}({:>6}%))".format(stde_t - stde_s, round((stde_t - stde_s)/stde_t*100, 2)))
     print(histogram)
 
     print("s\t{:<9}".format("N_s") + "{:<23}".format("N_s-N/sides") + "{:<23}".format("N_s/N") + "{}".format("N_s/N-1/sides"))
@@ -45,11 +45,20 @@ def OneDieS(trials, sides):
 
 def run():
     OneDieS(1, 6)
+    OneDieS(1, 10)
     OneDieS(10, 6)
+    OneDieS(10, 10)
     OneDieS(100, 6)
+    OneDieS(100, 10)
     OneDieS(1000, 6)
+    OneDieS(1000, 10)
+    OneDieS(5000, 6)
+    OneDieS(5000, 10)
     OneDieS(10000, 6)
+    OneDieS(10000, 10)
     OneDieS(100000, 6)
+    OneDieS(100000, 10)
     OneDieS(1000000, 6)
+    OneDieS(1000000, 10)
 
 run()
