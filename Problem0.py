@@ -10,18 +10,14 @@ def OneDie(trials):
     sides = 6
     histogram = [0, 0, 0, 0, 0, 0]
 
-    j = 0
     r = 0
-    while j < trials :
+    for j in range(trials):
         r = int(random.random()*sides)
         histogram[r] = histogram[r] + 1
-        j = j + 1
 
     print("s\t{:<9}".format("N_s") + "{:<23}".format("N_s-N/6") + "{:<23}".format("N_s/N") + "{}".format("N_s/N-1/6"))
-    j = 0
-    while j < sides:
+    for j in range(sides):
         print("{}\t{:<9}{:<23}{:<23}{}".format(j + 1, histogram[j], histogram[j] - trials/sides, histogram[j]/trials, histogram[j]/trials - 1/6))
-        j = j + 1
 
     c2 = time.clock()
     print("Elapsed time =", c2 - c1)
