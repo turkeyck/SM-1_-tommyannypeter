@@ -29,12 +29,13 @@ def OneDie(trials):
     print("Elapsed time =", c2 - c1)
 
 def run():
-    OneDie(1)
-    OneDie(10)
-    OneDie(100)
-    OneDie(1000)
-    OneDie(10000)
-    OneDie(100000)
-    OneDie(1000000)
+	OneDie(1)
+	OneDie(10)
+	OneDie(100)
+	OneDie(1000)
+	OneDie(10000)
+	OneDie(100000)
+	OneDie(1000000)
+	OneDie(1750000)
 
 run()

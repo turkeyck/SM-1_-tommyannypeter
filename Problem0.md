@@ -1,0 +1,124 @@
+## Problem 0: One die with 6 sides
+
+#### Question
+
+1. Write a program (or modify the one given) to calculate and print out the histogram of the number of times each side occurs, the deviation of this number from one-sixth of the number of trials, the frequency with which each side occurs, and the deviation of this from one sixth. Hand in a copy of the code you used.
+2. Show a typical print-out of your program.
+3. Run the program for various numbers of random integers, starting with a small number, say 10, and increasing to a substantially larger number. The only upper limit is that the program should not take more than about one second to run. ([Your time is valuable.) THIS IS A COMPUTATIONAL PROBLEM. ANSWERS MUST BE ACCOMPANIED BY DATA. Please hand in hard copies for all data to which you refer in your answers.
+4. As the number of trials increases, does the magnitude (absolute value) of the differences between the number of times a given side occurs and one-sixth of the number of trials increase or decrease? (Hint: This is not the same question as the next one.)
+5. As you increase the number of trials, does the ratio of the number of times each side occurs to the total number of trials approach closer to 1/6?
+
+#### Answer
+
+1. [Problem0.py](Problem0.py) 
+2. 
+> One die with 6 sides
+> Number of trials =  1
+> [0, 0, 0, 0, 0, 0]
+> s, N_s, N_s-N/6, N_s/N, N_s/N-1/6
+> 1 0 -0.16666666666666666 0.0 -0.16666666666666666
+> 2 1 0.8333333333333334 1.0 0.8333333333333334
+> 3 0 -0.16666666666666666 0.0 -0.16666666666666666
+> 4 0 -0.16666666666666666 0.0 -0.16666666666666666
+> 5 0 -0.16666666666666666 0.0 -0.16666666666666666
+> 6 0 -0.16666666666666666 0.0 -0.16666666666666666
+Elapsed time = 0.00023554808477897445
+3. 
+> ====================
+> One die with 6 sides
+> Number of trials =  1
+> [0, 0, 0, 0, 0, 0]
+> s, N_s, N_s-N/6, N_s/N, N_s/N-1/6
+> 1 0 -0.16666666666666666 0.0 -0.16666666666666666
+> 2 0 -0.16666666666666666 0.0 -0.16666666666666666
+> 3 0 -0.16666666666666666 0.0 -0.16666666666666666
+> 4 0 -0.16666666666666666 0.0 -0.16666666666666666
+> 5 1 0.8333333333333334 1.0 0.8333333333333334
+> 6 0 -0.16666666666666666 0.0 -0.16666666666666666
+> Elapsed time = 0.0002556472477017312
+> ====================
+> One die with 6 sides
+> Number of trials =  10
+> [0, 0, 0, 0, 0, 0]
+> s, N_s, N_s-N/6, N_s/N, N_s/N-1/6
+> 1 1 -0.6666666666666667 0.1 -0.06666666666666665
+> 2 0 -1.6666666666666667 0.0 -0.16666666666666666
+> 3 4 2.333333333333333 0.4 0.23333333333333336
+> 4 0 -1.6666666666666667 0.0 -0.16666666666666666
+> 5 1 -0.6666666666666667 0.1 -0.06666666666666665
+> 6 4 2.333333333333333 0.4 0.23333333333333336
+> Elapsed time = 0.0002954929566538632
+> ====================
+> One die with 6 sides
+> Number of trials =  100
+> [0, 0, 0, 0, 0, 0]
+> s, N_s, N_s-N/6, N_s/N, N_s/N-1/6
+> 1 17 0.33333333333333215 0.17 0.003333333333333355
+> 2 17 0.33333333333333215 0.17 0.003333333333333355
+> 3 12 -4.666666666666668 0.12 -0.04666666666666666
+> 4 15 -1.6666666666666679 0.15 -0.016666666666666663
+> 5 17 0.33333333333333215 0.17 0.003333333333333355
+> 6 22 5.333333333333332 0.22 0.053333333333333344
+> Elapsed time = 0.0003180604378302919
+> ====================
+> One die with 6 sides
+> Number of trials =  1000
+> [0, 0, 0, 0, 0, 0]
+> s, N_s, N_s-N/6, N_s/N, N_s/N-1/6
+> 1 159 -7.666666666666657 0.159 -0.007666666666666655
+> 2 163 -3.666666666666657 0.163 -0.0036666666666666514
+> 3 186 19.333333333333343 0.186 0.01933333333333334
+> 4 151 -15.666666666666657 0.151 -0.015666666666666662
+> 5 166 -0.6666666666666572 0.166 -0.0006666666666666488
+> 6 175 8.333333333333343 0.175 0.008333333333333331
+> Elapsed time = 0.0013258395191151854
+> ====================
+> One die with 6 sides
+> Number of trials =  10000
+> [0, 0, 0, 0, 0, 0]
+> s, N_s, N_s-N/6, N_s/N, N_s/N-1/6
+> 1 1739 72.33333333333326 0.1739 0.007233333333333342
+> 2 1613 -53.66666666666674 0.1613 -0.0053666666666666585
+> 3 1649 -17.666666666666742 0.1649 -0.0017666666666666664
+> 4 1676 9.333333333333258 0.1676 0.0009333333333333416
+> 5 1651 -15.666666666666742 0.1651 -0.0015666666666666607
+> 6 1672 5.3333333333332575 0.1672 0.0005333333333333301
+> Elapsed time = 0.015520079945302068
+> ====================
+> One die with 6 sides
+> Number of trials =  100000
+> [0, 0, 0, 0, 0, 0]
+> s, N_s, N_s-N/6, N_s/N, N_s/N-1/6
+> 1 16571 -95.66666666666788 0.16571 -0.0009566666666666612
+> 2 16727 60.33333333333212 0.16727 0.0006033333333333446
+> 3 16629 -37.66666666666788 0.16629 -0.00037666666666666404
+> 4 16654 -12.66666666666788 0.16654 -0.00012666666666666382
+> 5 16734 67.33333333333212 0.16734 0.0006733333333333313
+> 6 16685 18.33333333333212 0.16685 0.0001833333333333409
+> Elapsed time = 0.07830210734433991
+> ====================
+> One die with 6 sides
+> Number of trials =  1000000
+> [0, 0, 0, 0, 0, 0]
+> s, N_s, N_s-N/6, N_s/N, N_s/N-1/6
+> 1 166892 225.33333333334303 0.166892 0.00022533333333335515
+> 2 167025 358.33333333334303 0.167025 0.0003583333333333494
+> 3 166335 -331.66666666665697 0.166335 -0.0003316666666666468
+> 4 166494 -172.66666666665697 0.166494 -0.0001726666666666543
+> 5 166782 115.33333333334303 0.166782 0.00011533333333335616
+> 6 166472 -194.66666666665697 0.166472 -0.00019466666666664856
+> Elapsed time = 0.6950516213501067
+> ====================
+> One die with 6 sides
+> Number of trials =  1750000
+> [0, 0, 0, 0, 0, 0]
+> s, N_s, N_s-N/6, N_s/N, N_s/N-1/6
+> 1 291724 57.33333333331393 0.16669942857142858 3.276190476192431e-05
+> 2 291632 -34.66666666668607 0.16664685714285715 -1.980952380950529e-05
+> 3 291937 270.33333333331393 0.16682114285714286 0.00015447619047620487
+> 4 291445 -221.66666666668607 0.16654 -0.00012666666666666382
+> 5 291817 150.33333333331393 0.16675257142857142 8.590476190475926e-05
+> 6 291445 -221.66666666668607 0.16654 -0.00012666666666666382
+> Elapsed time = 0.9188910621843417
+4. The differences between the number of times a given side occurs and one-sixth of the number of trials increases.
+5. Yes, as the number of trials increasing, the ratio of the number of times each side occurs to the total number of trials goes closer to 1/6?
