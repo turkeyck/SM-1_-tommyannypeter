@@ -2,7 +2,7 @@ import random
 import time
 
 def OneDieS(trials, sides):
-    c1=time.clock()
+    c1 = time.clock()
     print("====================")
     print("Number of sides = ", sides)
     print("Number of trials = ", trials)
@@ -16,15 +16,14 @@ def OneDieS(trials, sides):
     for t in range(trials):
         r = int(random.random()*sides)
         histogram[r] = histogram[r] + 1
-    print( histogram)
+    print(histogram)
 
-
-    print("s, N_s, N_s-N/sides, N_s/N, N_s/N-1/sides")
+    print("s\t{:<9}".format("N_s") + "{:<23}".format("N_s-N/sides") + "{:<23}".format("N_s/N") + "{}".format("N_s/N-1/sides"))
     for s in range(sides):
-        print(s+1, histogram[s], histogram[s]-trials/sides, histogram[s]/trials, histogram[s]/trials-1/sides)
+        print("{}\t{:<9}{:<23}{:<23}{}".format(s + 1, histogram[s], histogram[s] - trials/sides, histogram[s]/trials, histogram[s]/trials - 1/sides))
 
-    c2=time.clock()
-    print("Elapsed time =", c2-c1)
+    c2 = time.clock()
+    print("Elapsed time =", c2 - c1)
 
 def run():
     OneDieS(1, 6)

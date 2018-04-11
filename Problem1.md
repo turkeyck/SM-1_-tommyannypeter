@@ -12,6 +12,6 @@ Suppose we have a die with S sides, where S is an integer, but not necessarily e
 #### Answer
 
 1. 
-2. 
+2. [Problem1.py](Problem1.py)
 3. 
 4. 
