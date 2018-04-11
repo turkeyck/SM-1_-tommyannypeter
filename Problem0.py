@@ -17,10 +17,10 @@ def OneDie(trials):
         histogram[r] = histogram[r] + 1
         j = j + 1
 
-    print("s\tN_s" + " " * 6 + "N_s-N/6" + " " * 16 + "N_s/N" + " " * 16 + "N_s/N-1/6")
+    print("s\t{:<9}".format("N_s") + "{:<23}".format("N_s-N/6") + "{:<23}".format("N_s/N") + "{}".format("N_s/N-1/6"))
     j = 0
     while j < sides:
-        print("{}\t{:<9}{:<23}{:<21}{}".format(j + 1, histogram[j], histogram[j] - trials/sides, histogram[j]/trials, histogram[j]/trials - 1/6))
+        print("{}\t{:<9}{:<23}{:<23}{}".format(j + 1, histogram[j], histogram[j] - trials/sides, histogram[j]/trials, histogram[j]/trials - 1/6))
         j = j + 1
 
     c2 = time.clock()
@@ -35,5 +35,6 @@ def run():
 	OneDie(100000)
 	OneDie(1000000)
 	OneDie(2000000)
+	OneDie(2200000)
 
 run()
