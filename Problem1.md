@@ -12,12 +12,15 @@ Suppose we have a die with S sides, where S is an integer, but not necessarily e
 #### Answer
 
 1. 
-<br>Mean value is
+Mean value is
 <a href="https://www.codecogs.com/eqnedit.php?latex=<S>&space;=&space;\sum_{n=1}^{S}\frac{n}{S}&space;=&space;\frac{1&plus;S}{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?<S>&space;=&space;\sum_{n=1}^{S}\frac{n}{S}&space;=&space;\frac{1&plus;S}{2}" title="<S> = \sum_{n=1}^{S}\frac{n}{S} = \frac{1+S}{2}" /></a><br/>
-<br>Variance is
+
+Variance is
 <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma^2&space;=&space;<(n-<S>)^2)>&space;=&space;\sum_{n=1}^{S}\frac{1}{S}(n-\frac{1&plus;S}{2})^2&space;=&space;\frac{S^2-1}{12}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma^2&space;=&space;<(n-<S>)^2)>&space;=&space;\sum_{n=1}^{S}\frac{1}{S}(n-\frac{1&plus;S}{2})^2&space;=&space;\frac{S^2-1}{12}" title="\sigma^2 = <(n-<S>)^2)> = \sum_{n=1}^{S}\frac{1}{S}(n-\frac{1+S}{2})^2 = \frac{S^2-1}{12}" /></a><br/>
-<br>Standard deviation is
+
+Standard deviation is
 <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma&space;=&space;\sqrt\frac{S^2-1}{12}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma&space;=&space;\sqrt\frac{S^2-1}{12}" title="\sigma = \sqrt\frac{S^2-1}{12}" /></a><br/>
+
 2. [Problem1.py](Problem1.py)
 3. 
 4. 
