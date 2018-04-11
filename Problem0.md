@@ -126,4 +126,4 @@ Elapsed time = 0.9188910621843417
 [Finished in 1.9s]
 ```
 4. The differences between the number of times a given side occurs and one-sixth of the number of trials increases.
-5. Yes, as the number of trials increasing, the ratio of the number of times each side occurs to the total number of trials goes closer to 1/6?
+5. Yes, as the number of trials increasing, the ratio of the number of times each side occurs to the total number of trials goes closer to 1/6.
